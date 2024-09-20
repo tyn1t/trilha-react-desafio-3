@@ -40,7 +40,9 @@ const Cadastro =  () => {
               password: formData.password,
           } // Remember to never store passwords in plain text
         const response = await api.post('/users', userData);
-        console.log(response)
+        if(response.status){
+          alert('Sucesso')
+        }
         navigate('/login')
         };
 
